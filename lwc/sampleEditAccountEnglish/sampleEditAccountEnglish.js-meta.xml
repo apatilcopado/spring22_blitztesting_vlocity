@@ -3,7 +3,7 @@
 <apiVersion>51.0</apiVersion>
 <runtimeNamespace>vlocity_ins</runtimeNamespace>
 <isExposed>true</isExposed>
-<description>Vlocity OmniScript Auto-generated - a3e5f000000REpGAAA</description>
+<description>Vlocity OmniScript Auto-generated - a3e5f000000z7BoAAI</description>
 <masterLabel>sample/editAccount/English</masterLabel>
 <targets>
 <target>lightningCommunity__Page</target>
@@ -40,6 +40,7 @@
                 <property name="inlineLabel" type="string" default="Launch sample/editAccount" />
                 <property name="inlineVariant" type="string" default="brand" datasource="brand,outline-brand,neutral,success,destructive,text-destructive,inverse,link"/>
                 <property name="recordId" type="String" label="Record Id" description="Automatically bind the page's record id to the component variable" default="{!recordId}" />
+                <property name="flexipageRegionWidth" type="String" label="Region Width" description="Set the responsive context for the OmniScript." default="LARGE" datasource="LARGE,MEDIUM,SMALL" />
                 <property name="dir" type="string" default="ltr" datasource="ltr,rtl"/>
             </targetConfig></targetConfigs>
 </LightningComponentBundle>
