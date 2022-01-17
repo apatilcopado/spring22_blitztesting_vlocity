@@ -42,25 +42,6 @@
                     </template>
                     <article class={containerClasses}
                             data-content-position={stepChartProps.position}>
-                        <div class={_sideContentClasses}>
-                            <vlocity_ins-omniscript-step-chart json-def={jsonDef}
-                                        json-data={jsonDef.response}
-                                        if:false={jsonDef.propSetMap.hideStepChart}
-                                        data-omni-key='omniscriptStepChart'
-                                        props={stepChartProps}
-                                        layout={layout}
-                                        script-header-def={scriptHeaderDef}>
-                            </vlocity_ins-omniscript-step-chart>
-                            <template if:true={_isKbEnabledOnScript}>
-                                <vlocity_ins-omniscript-knowledge-base knowledge-options={kbOptions}
-                                                             data-omni-key='omniscriptKnowledgeBase'
-                                                             layout={layout}
-                                                             data-stepchart-placement={_stepChartPlacement}
-                                                             omniscript-key={scriptHeaderDef.omniscriptKey}
-                                                             kb-label={knowledgeLabel}>
-                                </vlocity_ins-omniscript-knowledge-base>
-                            </template>
-                        </div>
                         <div data-stepborder={stepChartProps.position}
                             class={contentSldsClass}>
                             <template if:true={isPageLoading}>
@@ -120,6 +101,7 @@
                                                 <vlocity_ins-button
                                                     type="button"
                                                     label={navButton.previous.label}
+                                                    aria-label={prevStepAriaLabel}
                                                     variant="neutral"
                                                     extraclass="slds-size_1-of-1 slds-p-horizontal_none slds-text-align_center">
                                                 </vlocity_ins-button>
@@ -129,6 +111,7 @@
                                                 if:false={_isSeoEnabled}
                                                 type="button"
                                                 label={navButton.previous.label}
+                                                aria-label={prevStepAriaLabel}
                                                 variant="neutral"
                                                 class={navButton.previous.classes}
                                                 extraclass="slds-size_1-of-1 slds-p-horizontal_none slds-text-align_center"
@@ -145,6 +128,7 @@
                                                 <vlocity_ins-button
                                                     type="button"
                                                     label={navButton.next.label}
+                                                    aria-label={nextStepAriaLabel}
                                                     variant="brand"
                                                     extraclass="slds-size_1-of-1 slds-p-horizontal_none slds-text-align_center">
                                                 </vlocity_ins-button>
@@ -154,6 +138,7 @@
                                                 if:false={_isSeoEnabled}
                                                 type="button"
                                                 label={navButton.next.label}
+                                                aria-label={nextStepAriaLabel}
                                                 variant="brand"
                                                 class={navButton.next.classes}
                                                 extraclass="slds-size_1-of-1 slds-p-horizontal_none slds-text-align_center"
@@ -163,6 +148,25 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class={_sideContentClasses}>
+                            <vlocity_ins-omniscript-step-chart json-def={jsonDef}
+                                        json-data={jsonDef.response}
+                                        if:false={jsonDef.propSetMap.hideStepChart}
+                                        data-omni-key='omniscriptStepChart'
+                                        props={stepChartProps}
+                                        layout={layout}
+                                        script-header-def={scriptHeaderDef}>
+                            </vlocity_ins-omniscript-step-chart>
+                            <template if:true={_isKbEnabledOnScript}>
+                                <vlocity_ins-omniscript-knowledge-base knowledge-options={kbOptions}
+                                                             data-omni-key='omniscriptKnowledgeBase'
+                                                             layout={layout}
+                                                             data-stepchart-placement={_stepChartPlacement}
+                                                             omniscript-key={scriptHeaderDef.omniscriptKey}
+                                                             kb-label={knowledgeLabel}>
+                                </vlocity_ins-omniscript-knowledge-base>
+                            </template>
                         </div>
                     </article>
 
