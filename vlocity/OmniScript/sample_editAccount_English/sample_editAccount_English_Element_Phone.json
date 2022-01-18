@@ -31,7 +31,7 @@
         "helpText": "",
         "hide": false,
         "inputWidth": 12,
-        "label": "Phone",
+        "label": "Phone Test",
         "mask": "",
         "maxLength": 255,
         "minLength": 0,
